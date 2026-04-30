@@ -1,0 +1,13 @@
+This repository contains both Hardware and Software components, governed by the following licenses:
+
+1. HARDWARE (Cylindrical housings, PCB layouts, Mechanical drawings):
+Licensed under the CERN Open Hardware Licence - Strongly Reciprocal v2 (CERN-OHL-S).
+See: https://ohwr.org/project/cernohl/wikis/Documents/CERN-OHL-version-2
+
+2. SOFTWARE (Sovereign Kernel C++ source, Calibration logic, Scripts):
+Licensed under the GNU General Public License v3.0 (GPL-3.0-or-later).
+See: https://www.gnu.org/licenses/gpl-3.0.en.html
+
+Consistent with the "Architecture of Necessity," these licenses ensure that 
+the mechanical and logical boundaries of this project remain transparent 
+and protected from proprietary enclosure.
