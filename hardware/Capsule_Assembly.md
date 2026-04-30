@@ -5,7 +5,7 @@
 <h3>1. Scope</h3>
 
 <p>
-This document defines the deterministic bonding process required to integrate the metallic "Lipstick" housing with the wooden base.
+This document defines the deterministic bonding process required to integrate the metallic "Hockey Puck" housing with the wooden base.
 This assembly establishes the Material Bridge required for high-fidelity transduction.
 </p>
 
