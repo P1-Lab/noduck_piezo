@@ -2,46 +2,43 @@
 #include "gain_stage_calibration.h"
 
 /**
- * Sovereign_Kernel_Core
- * Function: Vitrify incoming signal through deterministic mass-inertia modeling.
- * Input: High-impedance 10MΩ JFET buffered signal.
- * Output: Forensic digital audit of instrument displacement.
+ * SovereignKernel
+ * State-space inspired audio model for piezo transduction signals.
+ * Implements a damped integrator system for low-frequency energy preservation.
  */
 
 class SovereignKernel {
 private:
-    const float mass_inertia_constant = 40.0f; // Minimum housing mass in grams
-    const float resonant_anchor_hz = 48.0f;    // The 48Hz "Deep Time" transient
-    float prev_displacement = 0.0f;
-    float velocity = 0.0f;
+    const float damping = 0.98f;
+    const float gain = GAIN_COEFFICIENT;
+
+    float prev = 0.0f;
+    float vel = 0.0f;
 
 public:
-    SovereignKernel() {
-        // Initialize deterministic state variables
-    }
+    SovereignKernel() {}
 
     /**
-     * Process_Sample
-     * Implements the Law of Transduction: F = ma
-     * Captures the material-to-signal bridge without stochastic "quack".
+     * Process a single audio sample.
+     * Input: buffered piezo signal (high impedance front-end)
+     * Output: modeled displacement-like response
      */
-    float process_sample(float input_voltage) {
-        // 1. Establish the Boundary: Apply fixed-point impedance filter
-        float force = input_voltage * GAIN_COEFFICIENT;
+    float process_sample(float input) {
 
-        // 2. Model Mechanical Inertia:
-        // Calculate acceleration based on mass constant to suppress quack.
-        float acceleration = force / mass_inertia_constant;
+        // Excitation stage (normalized input)
+        float excitation = input * gain;
 
-        // 3. Integrate Velocity:
-        // Maintains the 48Hz Resonant Anchor for signal integrity.
-        velocity += acceleration;
-        float displacement = prev_displacement + velocity;
+        // Integrator (velocity domain)
+        vel += excitation;
 
-        // 4. Dampening: Mechanical node simulation (Architecture of Necessity)
-        velocity *= 0.98f; 
-        prev_displacement = displacement;
+        // Displacement accumulation
+        float out = prev + vel;
 
-        return displacement;
+        // Damping (energy loss / system resistance)
+        vel *= damping;
+
+        prev = out;
+
+        return out;
     }
 };
