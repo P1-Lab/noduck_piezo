@@ -2,21 +2,26 @@
 #define GAIN_STAGE_CALIBRATION_H
 
 /**
- * FIXED_POINT_SCALING
- * 1.0f is represented as 65536 (2^16).
+ * Fixed-point configuration (Q16.16 format)
+ * 1.0f = 65536
  */
 #define Q_SHIFT 16
 #define FLOAT_TO_Q(x) ((int32_t)((x) * (1 << Q_SHIFT)))
 
-/* Mandatory Mass Constants */
-#define MASS_ZINC_Q        FLOAT_TO_Q(42.0f)  // Zinc Capsule mass in grams
-#define MASS_BRASS_Q       FLOAT_TO_Q(54.0f)  // Brass Capsule mass in grams
+/* Sampling Context */
+#define SAMPLE_RATE 48000.0f
 
-/* The 48Hz Resonant Anchor Coefficient */
-#define RESONANT_ANCHOR_Q  FLOAT_TO_Q(48.0f)  // Physical fundamental of the chassis
+/* Gain Calibration */
+#define GAIN_COEFFICIENT   FLOAT_TO_Q(1.25f)
 
-/* Calibration Coefficients */
-#define GAIN_COEFFICIENT   FLOAT_TO_Q(1.25f)  // Voltage to force normalization
-#define INERTIA_THRESHOLD  FLOAT_TO_Q(0.98f)  // Mechanical damping factor
+/* Damping / Decay Factor (0–1 in float domain is safer conceptually) */
+#define DAMPING_FACTOR     0.98f
 
-#endif // GAIN_STAGE_CALIBRATION_H
+/* Physical Modeling Reference Frequencies (float domain, not Q) */
+#define BODY_RESONANCE_HZ  48.0f
+
+/* Optional Material Reference Values (for future model expansion) */
+#define MASS_ZINC_GRAMS    42.0f
+#define MASS_BRASS_GRAMS   54.0f
+
+#endif
