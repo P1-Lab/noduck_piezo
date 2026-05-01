@@ -1,82 +1,69 @@
-# noduck_piezo
-A deterministic transduction standard utilizing high-mass "hockey puck" capsules and 35mm brass sensors. Designed to replace standard piezo triggers with a calibrated mechanical node, the system enforces material boundary and mass inertia to ensure signal integrity in high-value instruments
-<P></P><div>
+<div style="font-family: sans-serif; max-width: 800px; line-height: 1.5; color: #111;">
 
-<h2>README.md</h2>
+<h2>noduck_piezo</h2>
 
-<h3>Sovereign Capsule: Mechanical Nexus</h3>
+<p><strong>Mechanical Transduction Standard for Percussive Instruments</strong></p>
 
 <p>
-<strong>Transduction Standard for High-Value Instruments</strong>
+noduck_piezo is a mechanically stabilized piezoelectric transduction system designed to improve low-frequency response, transient accuracy, and strike consistency in contact-based percussion sensing.
 </p>
 
 <p>
-The Sovereign Capsule is a mechanical framework for instrument transduction based on the principles of Mass, Boundary, and Locality.
-It replaces adhesive-based piezo sensor mounting systems with a deterministic mechanical node designed to preserve signal integrity at the point of contact.
+It replaces adhesive-mounted piezo elements with a rigid, mass-loaded assembly and a high-impedance buffer stage.
 </p>
 
 <hr>
 
-<h3>1. Technical Principles</h3>
-
-<p>
-Conventional piezoelectric transducers often fail to fully capture the physical resonance of their host instrument due to insufficient mechanical constraint and inconsistent coupling.
-</p>
-
+<h3>Design Goals</h3>
 <ul>
-  <li><strong>Mass:</strong> 35mm brass sensor assemblies are enclosed in high-inertia housings to increase mechanical stability and resist micro-vibration artifacts.</li>
-
-  <li><strong>Boundary:</strong> Wood-on-wood contact interfaces establish a direct physical coupling path between sensor and instrument body, minimizing interface loss.</li>
-
-  <li><strong>Linearity:</strong> A 10MΩ JFET buffer stage preserves signal transparency while maintaining a high-impedance electrical environment.</li>
-</ul>
-
-<p>
-This architecture allows capture of the instrument’s intrinsic resonant behavior, including low-frequency structural modes such as the 48Hz resonant anchor.
-</p>
-
-<hr>
-
-<h3>2. Implementation Overview</h3>
-
-<p>
-This repository defines a complete replacement system for conventional piezoelectric pickup assemblies with a mechanically stabilized sensing node.
-</p>
-
-<h4>System Components</h4>
-
-<ul>
-  <li><strong>The Capsule:</strong> A shielded mechanical housing acting as a low-pass structural filter, reducing high-frequency transient noise at the physical interface level.</li>
-
-  <li><strong>The Buffer:</strong> A high-impedance JFET front-end designed to preserve source transparency and prevent loading effects.</li>
-
-  <li><strong>The Kernel:</strong> A deterministic C++ physics engine that models mechanical inertia and resonance without stochastic approximation.</li>
+<li>Improve low-frequency response</li>
+<li>Reduce mechanical variance between strikes</li>
+<li>Increase transient clarity and repeatability</li>
+<li>Preserve signal integrity via high input impedance</li>
 </ul>
 
 <hr>
 
-<h3>3. Documentation Structure</h3>
+<h3>System Architecture</h3>
 
+<p><strong>1. Mechanical Coupling</strong><br>
+35mm brass-backed piezo mounted in a rigid, mass-loaded housing to stabilize vibration response.</p>
+
+<p><strong>2. Structural Interface</strong><br>
+Direct rigid coupling to the instrument surface reduces energy loss and improves strike-to-signal consistency.</p>
+
+<p><strong>3. Buffer Stage</strong><br>
+Discrete JFET buffer (10MΩ input impedance) isolates the piezo from ADC loading effects.</p>
+
+<hr>
+
+<h3>Electrical Interface</h3>
 <ul>
-  <li>Retrofit Procedures: hardware/docs/capsule_retrofit_guide.md</li>
-  <li>Firmware Architecture: firmware/src/Sovereign_Kernel_Core.cpp</li>
-  <li>Material Standards: hardware/capsule/material_specs.md</li>
+<li>Piezo → JFET buffer (high impedance)</li>
+<li>Buffered output → ADC (3.3V protected)</li>
+<li>Optional Zener clamping for overvoltage protection</li>
 </ul>
 
 <hr>
 
-<h3>4. Licensing</h3>
-
+<h3>Intended Use</h3>
 <ul>
-  <li><strong>Hardware:</strong> CERN-OHL-S (Strongly Reciprocal)</li>
-  <li><strong>Firmware:</strong> GNU GPL v3.0</li>
+<li>Acoustic percussion instruments</li>
+<li>Hybrid electroacoustic systems</li>
+<li>Experimental contact microphone systems</li>
 </ul>
-
-<hr>
 
 <p>
-<strong>Design Intent:</strong><br>
-The project prioritizes mechanical accuracy, repeatability, and functional necessity over abstraction or signal approximation.
+Not a full audio processor — this is a transduction front-end.
+</p>
+
+<hr>
+
+<h3>Key Insight</h3>
+
+<p>
+Piezo performance limits are primarily mechanical, not computational.
+This system addresses the constraint at the physical interface layer.
 </p>
 
 </div>
