@@ -1,154 +1,155 @@
-<div>
+<div style="font-family: sans-serif; max-width: 900px; line-height: 1.6; color: #1a1a1a; border: 1px solid #111; padding: 30px; background-color: #ffffff;">
 
-<h2>BOM_Sovereign_Node.md</h2>
+  <div style="border-bottom: 2px solid #000; padding-bottom: 10px; margin-bottom: 25px;">
+    <h1 style="margin: 0; font-size: 1.5rem; letter-spacing: 0.05em; text-transform: uppercase;">
+      Bill of Materials: Piezo Capsule + High-Impedance Buffer Node
+    </h1>
+  </div>
 
-<h3>1. Scope</h3>
+  <p>
+    This document defines the components required to construct a high-impedance piezoelectric transducer node consisting of a mechanically mounted capsule and discrete JFET buffer stage.
+  </p>
 
-<p>
-This Bill of Materials defines the discrete components required to assemble one Sovereign Node (Capsule + Buffer).
-All components are selected to maintain a high-impedance deterministic signal path and preserve the 48 Hz Resonant Anchor.
-</p>
+  <p>
+    The system is designed to preserve transient response and low-frequency content by minimizing electrical loading and improving mechanical coupling stability.
+  </p>
 
-<hr>
+  <hr style="border: none; border-top: 1px solid #ddd; margin: 25px 0;" />
 
-<h3>2. Transducer Assembly</h3>
+  <h2 style="font-size: 1.1rem; text-transform: uppercase;">Transducer Assembly</h2>
 
-<table>
-  <tr>
-    <th>Component</th>
-    <th>Specification</th>
-    <th>Quantity</th>
-    <th>Purpose</th>
-  </tr>
+  <table style="width: 100%; border-collapse: collapse; margin-bottom: 25px;">
+    <tr>
+      <th style="text-align: left; border-bottom: 2px solid #000; padding: 8px;">Component</th>
+      <th style="text-align: left; border-bottom: 2px solid #000; padding: 8px;">Specification</th>
+      <th style="text-align: left; border-bottom: 2px solid #000; padding: 8px;">Qty</th>
+      <th style="text-align: left; border-bottom: 2px solid #000; padding: 8px;">Purpose</th>
+    </tr>
+    <tr>
+      <td style="padding: 8px;">Piezo Element</td>
+      <td style="padding: 8px;">35 mm brass-backed disc</td>
+      <td style="padding: 8px;">1</td>
+      <td style="padding: 8px;">Primary vibration-to-charge transducer</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px;">Housing</td>
+      <td style="padding: 8px;">38 mm cylindrical metal capsule</td>
+      <td style="padding: 8px;">1</td>
+      <td style="padding: 8px;">Mechanical support and shielding</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px;">Mounting Base</td>
+      <td style="padding: 8px;">2 mm hardwood (birch or mahogany)</td>
+      <td style="padding: 8px;">1</td>
+      <td style="padding: 8px;">Mechanical coupling interface</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px;">Wire</td>
+      <td style="padding: 8px;">Low-capacitance shielded 28 AWG</td>
+      <td style="padding: 8px;">~15 cm</td>
+      <td style="padding: 8px;">Internal signal routing</td>
+    </tr>
+  </table>
 
-  <tr>
-    <td>Piezo Element</td>
-    <td>35 mm Brass Substrate</td>
-    <td>1</td>
-    <td>Primary mechanical sensor</td>
-  </tr>
+  <h2 style="font-size: 1.1rem; text-transform: uppercase;">High-Impedance Buffer Stage</h2>
 
-  <tr>
-    <td>Capsule Housing</td>
-    <td>38 mm OD Zinc or Brass Lipstick Form Factor</td>
-    <td>1</td>
-    <td>Mechanical inertia and shielding</td>
-  </tr>
+  <p>
+    This stage buffers the piezo element to prevent loading effects and preserve low-frequency response.
+  </p>
 
-  <tr>
-    <td>Material Base</td>
-    <td>2 mm Baltic Birch or Mahogany Disc</td>
-    <td>1</td>
-    <td>Wood-on-wood impedance bridge</td>
-  </tr>
+  <table style="width: 100%; border-collapse: collapse; margin-bottom: 25px;">
+    <tr>
+      <th style="text-align: left; border-bottom: 2px solid #000; padding: 8px;">Component</th>
+      <th style="text-align: left; border-bottom: 2px solid #000; padding: 8px;">Specification</th>
+      <th style="text-align: left; border-bottom: 2px solid #000; padding: 8px;">Qty</th>
+      <th style="text-align: left; border-bottom: 2px solid #000; padding: 8px;">Purpose</th>
+    </tr>
+    <tr>
+      <td style="padding: 8px;">JFET</td>
+      <td style="padding: 8px;">J201 or LSK170</td>
+      <td style="padding: 8px;">1</td>
+      <td style="padding: 8px;">High-impedance input stage</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px;">Gate Resistor</td>
+      <td style="padding: 8px;">10 MΩ metal film</td>
+      <td style="padding: 8px;">1</td>
+      <td style="padding: 8px;">Input biasing / impedance definition</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px;">Source Resistor</td>
+      <td style="padding: 8px;">1 kΩ metal film (1%)</td>
+      <td style="padding: 8px;">1</td>
+      <td style="padding: 8px;">Bias stabilization</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px;">Drain Resistor</td>
+      <td style="padding: 8px;">10 kΩ metal film (1%)</td>
+      <td style="padding: 8px;">1</td>
+      <td style="padding: 8px;">Output gain setting</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px;">Input Capacitor</td>
+      <td style="padding: 8px;">10 nF polypropylene</td>
+      <td style="padding: 8px;">1</td>
+      <td style="padding: 8px;">DC blocking, low phase distortion</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px;">Output Capacitor</td>
+      <td style="padding: 8px;">1 µF film capacitor</td>
+      <td style="padding: 8px;">1</td>
+      <td style="padding: 8px;">AC coupling to output stage</td>
+    </tr>
+  </table>
 
-  <tr>
-    <td>Hookup Wire</td>
-    <td>28 AWG Shielded Twisted Pair (Low Capacitance)</td>
-    <td>15 cm</td>
-    <td>Internal signal transmission</td>
-  </tr>
-</table>
+  <h2 style="font-size: 1.1rem; text-transform: uppercase;">Interface Hardware</h2>
 
-<hr>
+  <table style="width: 100%; border-collapse: collapse; margin-bottom: 25px;">
+    <tr>
+      <th style="text-align: left; border-bottom: 2px solid #000; padding: 8px;">Component</th>
+      <th style="text-align: left; border-bottom: 2px solid #000; padding: 8px;">Specification</th>
+      <th style="text-align: left; border-bottom: 2px solid #000; padding: 8px;">Qty</th>
+      <th style="text-align: left; border-bottom: 2px solid #000; padding: 8px;">Purpose</th>
+    </tr>
+    <tr>
+      <td style="padding: 8px;">PCB</td>
+      <td style="padding: 8px;">Single-channel buffer board</td>
+      <td style="padding: 8px;">1</td>
+      <td style="padding: 8px;">Circuit mounting and routing</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px;">Output Connector</td>
+      <td style="padding: 8px;">1/4&quot; TRS or TA3</td>
+      <td style="padding: 8px;">1</td>
+      <td style="padding: 8px;">Audio interface</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px;">Adhesive</td>
+      <td style="padding: 8px;">High-strength epoxy (Shore D &gt; 80)</td>
+      <td style="padding: 8px;">As needed</td>
+      <td style="padding: 8px;">Mechanical bonding</td>
+    </tr>
+  </table>
 
-<h3>3. No-Quack JFET Buffer (Front-End)</h3>
+  <h2 style="font-size: 1.1rem; text-transform: uppercase;">Design Notes</h2>
 
-<p>
-This subsystem forms a 10 MΩ high-impedance buffer designed to stabilize and preserve piezo transduction behavior.
-</p>
+  <ul>
+    <li>The 10 MΩ input resistor defines electrical loading conditions of the piezo element.</li>
+    <li>Mechanical coupling quality directly affects transient response and low-frequency behavior.</li>
+    <li>Housing mass and rigidity influence vibration damping and signal consistency.</li>
+  </ul>
 
-<table>
-  <tr>
-    <th>Component</th>
-    <th>Value / Part</th>
-    <th>Quantity</th>
-    <th>Requirement</th>
-  </tr>
+  <h2 style="font-size: 1.1rem; text-transform: uppercase;">Substitution Constraints</h2>
 
-  <tr>
-    <td>JFET</td>
-    <td>J201 or LSK170</td>
-    <td>1</td>
-    <td>Low-noise high-impedance amplification</td>
-  </tr>
+  <ul>
+    <li>Reducing input impedance below 10 MΩ increases loading and reduces low-frequency response.</li>
+    <li>Changing mechanical mounting method significantly alters transient behavior.</li>
+  </ul>
 
-  <tr>
-    <td>Gate Resistor</td>
-    <td>10 MΩ</td>
-    <td>1</td>
-    <td>Defines input boundary impedance</td>
-  </tr>
+  <hr style="border: none; border-top: 1px solid #ddd; margin: 25px 0;" />
 
-  <tr>
-    <td>Source Resistor</td>
-    <td>1 kΩ (Metal Film, 1%)</td>
-    <td>1</td>
-    <td>Bias stability</td>
-  </tr>
-
-  <tr>
-    <td>Drain Resistor</td>
-    <td>10 kΩ (Metal Film, 1%)</td>
-    <td>1</td>
-    <td>Linear output gain stage</td>
-  </tr>
-
-  <tr>
-    <td>Input Capacitor</td>
-    <td>10 nF Polypropylene</td>
-    <td>1</td>
-    <td>DC blocking with minimal phase shift</td>
-  </tr>
-
-  <tr>
-    <td>Output Capacitor</td>
-    <td>1 µF Film or Tantalum</td>
-    <td>1</td>
-    <td>Preserves low-frequency transient response</td>
-  </tr>
-</table>
-
-<hr>
-
-<h3>4. Hardware & Enclosure</h3>
-
-<table>
-  <tr>
-    <th>Item</th>
-    <th>Specification</th>
-    <th>Quantity</th>
-    <th>Purpose</th>
-  </tr>
-
-  <tr>
-    <td>PCB</td>
-    <td>Sovereign Mini-Node PCB v1.0</td>
-    <td>1</td>
-    <td>Component mounting and routing</td>
-  </tr>
-
-  <tr>
-    <td>Connector</td>
-    <td>TRS 1/4" or TA3 Mini-XLR</td>
-    <td>1</td>
-    <td>Balanced output interface</td>
-  </tr>
-
-  <tr>
-    <td>Adhesive</td>
-    <td>Structural Epoxy (>80D Shore Hardness)</td>
-    <td>1</td>
-    <td>Permanent mechanical bonding</td>
-  </tr>
-</table>
-
-<hr>
-
-<p>
-<strong>Note:</strong><br>
-Substitution of the 10 MΩ gate resistor or the 35 mm brass substrate introduces stochastic signal deviation and reintroduces piezoelectric "quack".
-Component consistency is mandatory for compliance with the Architecture of Necessity.
-</p>
+  <p>
+    <strong>Summary:</strong> This system defines a high-impedance piezo transducer node optimized for consistent mechanical coupling and minimal electrical loading.
+  </p>
 
 </div>
