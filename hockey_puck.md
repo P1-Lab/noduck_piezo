@@ -1,89 +1,52 @@
-<div>
+<h2 style="font-family:sans-serif; letter-spacing:0.06em; text-transform:uppercase;">
+Hockey Puck.md
+</h2>
 
-<h2>hockey_puck.md</h2>
-
-<h3>The “Hockey Puck” Transducer: A Reference Mass Standard</h3>
-
-<p>
-The Sovereign Capsule introduces a shift in instrument transduction architecture, prioritizing mass, boundary integrity, and mechanical inertia over conventional miniature piezoelectric pickups.
+<p style="font-family:sans-serif; font-weight:600; color:#555;">
+Mass-Loaded Piezo Transducer Housing
 </p>
 
-<p>
-Although its cylindrical form is sometimes visually misclassified as a “lipstick-style” sensor, its functional geometry is that of a high-density inertial plug—a “hockey puck” mass standard designed for structural coupling.
+<p style="font-family:sans-serif; line-height:1.6; max-width:850px;">
+The “Hockey Puck” is a cylindrical mechanical housing designed to stabilize piezoelectric contact transducers through controlled mass loading and rigid structural coupling. It is intended for percussion and contact-based instrument systems requiring stable transient response and low-frequency consistency.
 </p>
 
-<hr>
+<h3 style="font-family:sans-serif; text-transform:uppercase; letter-spacing:0.05em; border-left:4px solid #000; padding-left:10px;">
+Design Intent
+</h3>
 
-<h3>Technical Specifications</h3>
-
-<table>
-  <tr>
-    <th>Dimension</th>
-    <th>Specification</th>
-    <th>Functional Necessity</th>
-  </tr>
-
-  <tr>
-    <td>Outside Diameter (OD)</td>
-    <td>38.0 mm (1.50 in)</td>
-    <td>Enables housing of 35 mm sensor with mechanical isolation margin</td>
-  </tr>
-
-  <tr>
-    <td>Inside Diameter (ID)</td>
-    <td>35.0 mm (1.38 in)</td>
-    <td>Precision fit for brass transducer substrate</td>
-  </tr>
-
-  <tr>
-    <td>Height</td>
-    <td>12.0 – 15.0 mm</td>
-    <td>Maintains low-profile integration into instrument body</td>
-  </tr>
-
-  <tr>
-    <td>Housing Mass</td>
-    <td>&gt; 42 g</td>
-    <td>Zinc-based inertial filtering to suppress high-frequency transients</td>
-  </tr>
-</table>
-
-<hr>
-
-<h3>The Philosophy of the Form</h3>
-
-<h4>1. Mechanical Rationale</h4>
-
-<p>
-The design operates as a mechanical counter-model to lightweight piezo systems.
-High-density zinc housing introduces inertial resistance that stabilizes the mechanical signal path and enforces a rigid material coupling to the instrument chassis.
+<p style="font-family:sans-serif; line-height:1.6; max-width:850px;">
+Conventional piezo mounting introduces variability due to adhesive inconsistency, low mechanical mass, and uncontrolled vibration modes. This design increases mechanical stability at the transduction interface.
 </p>
 
-<h4>2. The 35 mm Standard</h4>
+<h3 style="font-family:sans-serif; text-transform:uppercase; letter-spacing:0.05em; border-left:4px solid #000; padding-left:10px;">
+Physical Design
+</h3>
 
-<p>
-The 35 mm brass element is selected for its extended low-frequency response characteristics.
-Its surface area increases mechanical capture of structural vibration modes, aligning with the system requirement for full-body transduction rather than surface sampling.
+<p style="font-family:sans-serif;">
+<strong>Outer Diameter:</strong> 38 mm — housing tolerance for 35 mm element<br>
+<strong>Inner Cavity:</strong> 35 mm — precision piezo fit<br>
+<strong>Height:</strong> 12–15 mm — low-profile integration<br>
+<strong>Mass:</strong> > 42 g — zinc or alloy for stability
 </p>
 
-<h4>3. Structural Integration</h4>
+<h3 style="font-family:sans-serif; text-transform:uppercase; letter-spacing:0.05em; border-left:4px solid #000; padding-left:10px;">
+Mechanical Behavior
+</h3>
 
-<ul>
-  <li>Requires 38 mm Forstner bit cavity for precision seating</li>
-  <li>Removes material volume to ensure permanent mechanical embedding</li>
-  <li>Establishes a fixed mass node within the instrument structure</li>
-</ul>
-
-<hr>
-
-<h3>Geometrical Distinction</h3>
-
-<p>
-Unlike traditional “lipstick” pickups—elongated, low-mass brass tubes optimized for convenience mounting—the Hockey Puck is a dense cylindrical inertial body.
+<p style="font-family:sans-serif; line-height:1.6;">
+Mass loading reduces micro-vibration sensitivity and stabilizes energy transfer. The transducer is mechanically embedded into the structure for repeatable strike response.
 </p>
 
-<p>
-Its geometry rejects thin-walled electronic design logic in favor of mechanically enforced determinism, where signal fidelity is governed by mass coupling rather than electrical compensation.
+<h3 style="font-family:sans-serif; text-transform:uppercase; letter-spacing:0.05em; border-left:4px solid #000; padding-left:10px;">
+Installation Requirements
+</h3>
+
+<p style="font-family:sans-serif;">
+38 mm precision cavity required. Tight mechanical seating with minimal adhesive dependency. Direct structural coupling unless explicitly damped in secondary design layers.
 </p>
 
-</div>
+<hr style="border:0; border-top:1px solid #ddd; margin-top:20px;">
+
+<p style="font-family:sans-serif; font-size:0.9rem; color:#555;">
+Mechanical interface only. No signal processing or electronic modification occurs at this layer.
+</p>
