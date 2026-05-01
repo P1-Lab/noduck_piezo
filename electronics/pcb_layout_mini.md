@@ -1,99 +1,103 @@
-<div>
+<div style="font-family: sans-serif; max-width: 900px; line-height: 1.6; color: #1a1a1a; border: 1px solid #111; padding: 30px; background-color: #ffffff;">
 
-<h2>pcb_layout_mini.md</h2>
+  <div style="border-bottom: 2px solid #000; padding-bottom: 10px; margin-bottom: 25px;">
+    <h1 style="margin: 0; font-size: 1.5rem; letter-spacing: 0.05em; text-transform: uppercase;">
+      Mini-Node PCB Layout Specification
+    </h1>
+  </div>
 
-<h3>1. Objective</h3>
+  <h2 style="font-size: 1.1rem; text-transform: uppercase;">1. Objective</h2>
 
-<p>
-This document defines the physical and electrical constraints for the Sovereign Mini-Node PCB.
-The JFET buffer must reside within or immediately adjacent to the Lipstick capsule to preserve Faradaic isolation and maintain deterministic signal behavior.
-</p>
+  <p>
+    This document defines the physical and electrical layout constraints for a compact high-impedance piezo buffer PCB designed for integration inside a cylindrical transducer housing.
+  </p>
 
-<p>
-The layout is therefore optimized for a compact circular footprint with strict mechanical coupling to the capsule architecture.
-</p>
+  <p>
+    The PCB functions as a JFET-based buffer stage directly coupled to a piezoelectric element.
+  </p>
 
-<hr>
+  <hr style="border: none; border-top: 1px solid #ddd; margin: 25px 0;" />
 
-<h3>2. Physical Design Constraints</h3>
+  <h2 style="font-size: 1.1rem; text-transform: uppercase;">2. Mechanical Constraints</h2>
 
-<ul>
-  <li><strong>Form Factor:</strong> Circular PCB</li>
-  <li><strong>Maximum Diameter:</strong> 32.0 mm (clearance fit within 35.0 mm internal capsule diameter)</li>
-  <li><strong>Substrate:</strong> FR4, 1.6 mm thickness</li>
-  <li><strong>Copper Weight:</strong> 1 oz standard copper for controlled impedance and manufacturability</li>
-</ul>
+  <ul>
+    <li><strong>Form Factor:</strong> Circular PCB</li>
+    <li><strong>Maximum Diameter:</strong> 32.0 mm (fits within 35.0 mm housing cavity)</li>
+    <li><strong>Substrate:</strong> FR4, 1.6 mm</li>
+    <li><strong>Copper Weight:</strong> 1 oz standard</li>
+  </ul>
 
-<hr>
+  <p>
+    The PCB is mechanically constrained by the transducer housing and must maintain stable coupling to the piezo element.
+  </p>
 
-<h3>3. Layer Stackup and Routing</h3>
+  <hr style="border: none; border-top: 1px solid #ddd; margin: 25px 0;" />
 
-<table>
-  <tr>
-    <th>Layer</th>
-    <th>Function</th>
-    <th>Technical Requirement</th>
-  </tr>
+  <h2 style="font-size: 1.1rem; text-transform: uppercase;">3. Layer Stackup</h2>
 
-  <tr>
-    <td>Top Layer</td>
-    <td>Signal Routing / Components</td>
-    <td>SMT (0805) or through-hole JFET placement permitted</td>
-  </tr>
+  <table style="width: 100%; border-collapse: collapse; margin-bottom: 25px;">
+    <tr>
+      <th style="text-align: left; border-bottom: 2px solid #000; padding: 8px;">Layer</th>
+      <th style="text-align: left; border-bottom: 2px solid #000; padding: 8px;">Function</th>
+      <th style="text-align: left; border-bottom: 2px solid #000; padding: 8px;">Requirement</th>
+    </tr>
+    <tr>
+      <td style="padding: 8px;">Top Layer</td>
+      <td style="padding: 8px;">Signal + Components</td>
+      <td style="padding: 8px;">JFET and passive components placed on top side</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px;">Bottom Layer</td>
+      <td style="padding: 8px;">Ground Plane</td>
+      <td style="padding: 8px;">Continuous copper pour for shielding and reference stability</td>
+    </tr>
+  </table>
 
-  <tr>
-    <td>Bottom Layer</td>
-    <td>Ground Plane</td>
-    <td>Continuous copper pour to establish deterministic reference for 10 MΩ boundary</td>
-  </tr>
+  <hr style="border: none; border-top: 1px solid #ddd; margin: 25px 0;" />
 
-  <tr>
-    <td>Trace Width</td>
-    <td>Signal Routing Constraint</td>
-    <td>0.25 mm minimum for low-current signal integrity</td>
-  </tr>
+  <h2 style="font-size: 1.1rem; text-transform: uppercase;">4. Layout Rules (High Impedance Design)</h2>
 
-  <tr>
-    <td>Isolation</td>
-    <td>High-Impedance Protection</td>
-    <td>0.50 mm minimum spacing around Gate node to prevent parasitic leakage</td>
-  </tr>
-</table>
+  <ul>
+    <li>Gate node trace length must be minimized</li>
+    <li>Minimum spacing: 0.5 mm around high impedance input nodes</li>
+    <li>Minimum trace width: 0.25 mm (signal routing)</li>
+    <li>Ground plane must remain continuous under all non-isolated regions</li>
+  </ul>
 
-<hr>
+  <p>
+    These constraints reduce leakage and parasitic capacitance at the input stage.
+  </p>
 
-<h3>4. Component Placement Topology</h3>
+  <hr style="border: none; border-top: 1px solid #ddd; margin: 25px 0;" />
 
-<ol>
-  <li><strong>Central Node:</strong> JFET (J201 / LSK170) placed at geometric center to minimize input path length.</li>
+  <h2 style="font-size: 1.1rem; text-transform: uppercase;">5. Component Placement</h2>
 
-  <li><strong>Gate Boundary:</strong> 10 MΩ resistor placed immediately adjacent to Gate terminal to stabilize impedance before environmental interference.</li>
+  <ul>
+    <li>JFET placed centrally to minimize input path length</li>
+    <li>10 MΩ gate resistor placed adjacent to JFET gate pin</li>
+    <li>Power and output pads placed on opposite edges of PCB for clean routing</li>
+  </ul>
 
-  <li><strong>Peripheral I/O:</strong> Power and signal pads distributed at opposing edges (0° / 180° axis) for direct capsule exit routing.</li>
-</ol>
+  <hr style="border: none; border-top: 1px solid #ddd; margin: 25px 0;" />
 
-<hr>
+  <h2 style="font-size: 1.1rem; text-transform: uppercase;">6. Mechanical Integration</h2>
 
-<h3>5. Mechanical Integration</h3>
+  <ul>
+    <li>PCB is mounted inside a cylindrical metal housing</li>
+    <li>Non-conductive adhesive or press-fit retention used for fixation</li>
+    <li>Direct solder connection to piezo element leads (no intermediate connectors)</li>
+  </ul>
 
-<ul>
-  <li><strong>Mounting Method:</strong> Non-conductive adhesive or press-fit retention within metallic housing</li>
-  <li><strong>Input Interface:</strong> Direct solder connection to 35 mm brass piezo leads (connectorless design)</li>
-</ul>
+  <hr style="border: none; border-top: 1px solid #ddd; margin: 25px 0;" />
 
-<hr>
+  <h2 style="font-size: 1.1rem; text-transform: uppercase;">7. Design Summary</h2>
 
-<p>
-<strong>Design Constraint:</strong><br>
-The PCB is not an independent subsystem. It is a mechanically coupled transduction layer integrated into the capsule mass system.
-</p>
+  <p>
+    This PCB is a high-impedance analog buffer stage designed for direct integration with a piezoelectric transducer.
+  </p>
 
-<hr>
-
-<p>
-<strong>Note:</strong><br>
-This specification defines the geometric and electrical precursor to the STEP model and PCB fabrication files.
-Compliance is mandatory to maintain the Architecture of Necessity, including mass, boundary, and impedance constraints.
-</p>
+  <p>
+    Its performance depends on both electrical layout and mechanical coupling to the housing system.
+  </p>
 
 </div>
