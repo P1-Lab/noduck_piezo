@@ -5,8 +5,8 @@
 <h3>1. Scope</h3>
 
 <p>
-This document defines the deterministic bonding process required to integrate the metallic "Hockey Puck" housing with the wooden base.
-This assembly establishes the Material Bridge required for high-fidelity transduction.
+This document defines the mechanical bonding process required to integrate the metallic capsule housing with the wooden substrate.
+This assembly establishes a stable physical interface between transducer, housing, and instrument body.
 </p>
 
 <hr>
@@ -14,10 +14,10 @@ This assembly establishes the Material Bridge required for high-fidelity transdu
 <h3>2. Required Components</h3>
 
 <ul>
-  <li><strong>Metallic Housing:</strong> Machined Zinc or Brass cylindrical shell (OD 38 mm)</li>
+  <li><strong>Metallic Housing:</strong> Machined zinc or brass cylindrical shell (OD 38 mm)</li>
   <li><strong>Wooden Base:</strong> 2.0 mm Baltic Birch or Mahogany disc, precision-cut to internal housing diameter</li>
-  <li><strong>Adhesive:</strong> High-modulus cyanoacrylate or structural epoxy (Shore hardness &gt; 80D)</li>
-  <li><strong>Transducer:</strong> 35.0 mm Brass Piezo element</li>
+  <li><strong>Adhesive:</strong> High-modulus cyanoacrylate or structural epoxy (Shore hardness > 80D)</li>
+  <li><strong>Transducer:</strong> 35.0 mm brass piezo element</li>
 </ul>
 
 <hr>
@@ -28,50 +28,61 @@ This assembly establishes the Material Bridge required for high-fidelity transdu
   <tr>
     <th>Phase</th>
     <th>Operation</th>
-    <th>Technical Requirement</th>
+    <th>Requirement</th>
   </tr>
 
   <tr>
     <td>I. Preparation</td>
-    <td>Mechanical abrading of internal metallic base surface</td>
-    <td>Removes oxidation to ensure molecular-level adhesion between substrate and adhesive</td>
+    <td>Clean and lightly abrade internal metallic bonding surface</td>
+    <td>Ensures consistent adhesion by removing oxidation and surface contaminants</td>
   </tr>
 
   <tr>
-    <td>II. Wood Bonding</td>
+    <td>II. Substrate Bonding</td>
     <td>Apply adhesive and press-fit wooden disc into housing</td>
-    <td>Must achieve full surface contact to eliminate air gaps and high-frequency artifacts</td>
+    <td>Full surface contact required to prevent mechanical decoupling or air gaps</td>
   </tr>
 
   <tr>
-    <td>III. Piezo Seating</td>
-    <td>Mount 35 mm brass sensor directly onto wooden surface</td>
-    <td>Establishes wood-on-wood signal path (Instrument → Base → Sensor)</td>
+    <td>III. Transducer Mounting</td>
+    <td>Mount 35 mm piezo element onto wooden surface</td>
+    <td>Ensures direct mechanical coupling through the wood substrate</td>
   </tr>
 
   <tr>
     <td>IV. Curing</td>
-    <td>Apply constant pressure during bond curing</td>
-    <td>Minimum 15 PSI for 24 hours to form unified mechanical structure</td>
+    <td>Maintain constant pressure during adhesive cure cycle</td>
+    <td>Uniform clamping force (approx. 10–15 PSI) for 24 hours</td>
   </tr>
 </table>
 
 <hr>
 
-<h3>4. Quality Control (Forensic Audit)</h3>
+<h3>4. Quality Control (Mechanical Validation)</h3>
 
 <ul>
-  <li><strong>Continuity Test:</strong> Verify electrical continuity between capsule shell and cable shield to confirm Faradaic isolation integrity</li>
-  <li><strong>Mass Verification:</strong> Completed assembly must exceed 40 g minimum inertial threshold</li>
-  <li><strong>Tap Test:</strong> Mechanical impulse on base must produce a stable 48 Hz resonant response in the Sovereign Kernel</li>
+  <li><strong>Electrical Continuity Test:</strong> Verify capsule shell grounding to cable shield where applicable to maintain shielding integrity</li>
+
+  <li><strong>Mass Verification:</strong> Ensure completed assembly meets minimum inertial mass target for consistent coupling behavior</li>
+
+  <li><strong>Impulse Response Check:</strong> Light mechanical excitation should produce a stable, repeatable low-frequency response characteristic when measured through the full system chain</li>
 </ul>
+
+<hr>
+
+<h3>5. Design Notes</h3>
+
+<p>
+The assembly is designed to maximize mechanical coupling between instrument body and transducer system.
+Signal characteristics such as low-frequency emphasis or resonance behavior are emergent properties of the full instrument geometry and downstream processing chain.
+</p>
 
 <hr>
 
 <p>
 <strong>Note:</strong><br>
-Deviation from this bonding protocol introduces stochastic variability that degrades the Architecture of Necessity.
-Consistency in the material interface is required for proper sensor vitrification.
+Variations in materials, bonding pressure, or substrate density will affect system response.
+This protocol defines mechanical consistency requirements rather than guaranteeing specific acoustic outcomes.
 </p>
 
 </div>
