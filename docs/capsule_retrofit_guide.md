@@ -1,105 +1,99 @@
-<div>
+<h2 style="font-family:sans-serif; letter-spacing:0.06em; text-transform:uppercase;">
+capsule_retrofit_guide.md
+</h2>
 
-<h2>capsule_retrofit_guide.md</h2>
+<h3 style="font-family:sans-serif; color:#555; font-weight:600;">
+Piezo Capsule Retrofit Installation Guide
+</h3>
 
-<h3>1. Scope</h3>
-
-<p>
-This guide defines the protocol for replacing standard adhesive-based piezoelectric sensors with a Sovereign Capsule in high-value acoustic and hybrid instruments.
-The objective is restoration of Material Authority through elimination of stochastic transduction artifacts commonly described as “quack.”
+<p style="font-family:sans-serif; max-width:850px; line-height:1.6;">
+This guide describes the installation procedure for replacing adhesive-mounted piezoelectric sensors with a mechanically mounted capsule-based transducer system in acoustic and hybrid instruments.  
+The goal is improved consistency, transient response, and low-frequency stability through controlled mechanical coupling.
 </p>
 
-<hr>
+<hr style="border:none; border-top:1px solid #ddd; margin:18px 0;">
 
-<h3>2. Required Tools and Materials</h3>
+<h3 style="font-family:sans-serif; text-transform:uppercase; letter-spacing:0.05em; border-left:4px solid #000; padding-left:10px;">
+Scope
+</h3>
 
-<ul>
-  <li><strong>Sovereign Capsule Node:</strong> Fully assembled per capsule assembly specification</li>
-  <li><strong>Precision Forstner Bit:</strong> 38.0 mm diameter matching capsule outer geometry</li>
-  <li><strong>Structural Adhesive:</strong> High-modulus epoxy (Shore hardness > 80D)</li>
-  <li><strong>JFET Buffer Assembly:</strong> Pre-built PCB module per mini-node layout specification</li>
-</ul>
-
-<hr>
-
-<h3>3. Site Selection</h3>
-
-<p>
-Capsule placement is determined by mechanical nodal behavior of the instrument body.
-Selection is not aesthetic; it is structural.
+<p style="font-family:sans-serif; line-height:1.6;">
+This procedure applies to retrofit installation of rigidly mounted piezo capsule transducers in wooden or composite percussion instruments.  
+It replaces surface-mounted adhesive pickups with mechanically embedded sensor housings.
 </p>
 
-<ul>
-  <li><strong>Primary Location:</strong> Bridge plate or high-density bracing intersection</li>
-  <li><strong>Boundary Requirement:</strong> Surface must be planar to ensure full material contact with capsule base</li>
-</ul>
+<h3 style="font-family:sans-serif; text-transform:uppercase; letter-spacing:0.05em; border-left:4px solid #000; padding-left:10px;">
+Required Tools and Materials
+</h3>
 
-<hr>
-
-<h3>4. Installation Protocol</h3>
-
-<table>
-  <tr>
-    <th>Stage</th>
-    <th>Procedure</th>
-    <th>Functional Requirement</th>
-  </tr>
-
-  <tr>
-    <td>I. Cavity Preparation</td>
-    <td>Machine a 38.0 mm flat-bottom recess to 2.0 mm depth</td>
-    <td>Defines physical boundary for capsule housing integration</td>
-  </tr>
-
-  <tr>
-    <td>II. Dry Fit</td>
-    <td>Verify capsule seating without lateral movement or tilt</td>
-    <td>Prevents air-gap formation and stochastic vibration artifacts</td>
-  </tr>
-
-  <tr>
-    <td>III. Mechanical Bonding</td>
-    <td>Apply thin epoxy layer to wood interface and seat capsule</td>
-    <td>Creates unified mechanical mass between instrument and sensor</td>
-  </tr>
-
-  <tr>
-    <td>IV. Pressure Curing</td>
-    <td>Maintain constant pressure during 24-hour cure cycle</td>
-    <td>Ensures stabilization of 48 Hz resonant structure</td>
-  </tr>
-</table>
-
-<hr>
-
-<h3>5. Signal Integration</h3>
-
-<ul>
-  <li><strong>Shielding:</strong> Metallic capsule housing must be tied to signal ground for Faradaic isolation</li>
-  <li><strong>Impedance Path:</strong> Direct routing into 10 MΩ JFET buffer input stage</li>
-  <li><strong>Output Calibration:</strong> Final signal must be normalized through Sovereign Kernel processing layer</li>
-</ul>
-
-<hr>
-
-<h3>6. Validation</h3>
-
-<p>
-Post-installation, the instrument must undergo mechanical verification.
+<p style="font-family:sans-serif; line-height:1.7;">
+• Sovereign Capsule Node (pre-assembled transducer housing)<br>
+• 38.0 mm Forstner bit or precision boring tool<br>
+• High-modulus epoxy adhesive (Shore D > 80)<br>
+• JFET buffer module (≥10 MΩ input impedance)<br>
+• Standard luthiery tools for cavity preparation and alignment
 </p>
 
-<ul>
-  <li>Bridge excitation must produce a linear and repeatable response</li>
-  <li>High-frequency “quack” artifacts must be eliminated</li>
-  <li>Low-frequency structural modes must remain intact as Deep Time transients</li>
-</ul>
+<h3 style="font-family:sans-serif; text-transform:uppercase; letter-spacing:0.05em; border-left:4px solid #000; padding-left:10px;">
+Placement Selection
+</h3>
 
-<hr>
-
-<p>
-<strong>Constraint Statement:</strong><br>
-Modification of high-value instruments requires adherence to the Architecture of Necessity.
-This protocol prioritizes physical mass coupling over electronic correction or post-processing compensation.
+<p style="font-family:sans-serif;">
+<strong>Primary:</strong> Bridge / main load transfer path<br>
+<strong>Secondary:</strong> Structural brace intersections<br>
+<strong>Tertiary:</strong> High-stiffness grain regions with resonance sustain
 </p>
 
-</div>
+<p style="font-family:sans-serif;">
+Surface must be flat for full capsule contact. Avoid mechanically decoupled or floating panels.
+</p>
+
+<h3 style="font-family:sans-serif; text-transform:uppercase; letter-spacing:0.05em; border-left:4px solid #000; padding-left:10px;">
+Installation Procedure
+</h3>
+
+<p style="font-family:sans-serif;">
+<strong>Stage I — Cavity Preparation</strong><br>
+Machine 38.0 mm flat-bottom recess, 12–15 mm depth, with perpendicular walls.
+</p>
+
+<p style="font-family:sans-serif;">
+<strong>Stage II — Dry Fit</strong><br>
+Verify full seating, no tilt, and no air gaps between capsule and cavity.
+</p>
+
+<p style="font-family:sans-serif;">
+<strong>Stage III — Bonding</strong><br>
+Apply thin epoxy layer, seat capsule, remove excess adhesive for uniform curing.
+</p>
+
+<p style="font-family:sans-serif;">
+<strong>Stage IV — Curing</strong><br>
+Maintain constant pressure for ~24 hours. No movement during polymerization.
+</p>
+
+<h3 style="font-family:sans-serif; text-transform:uppercase; letter-spacing:0.05em; border-left:4px solid #000; padding-left:10px;">
+Electrical Integration
+</h3>
+
+<p style="font-family:sans-serif;">
+Connect capsule output to ≥10 MΩ JFET buffer input.  
+Ensure proper grounding and route buffered signal to ADC stage (3.3V compliant).
+</p>
+
+<h3 style="font-family:sans-serif; text-transform:uppercase; letter-spacing:0.05em; border-left:4px solid #000; padding-left:10px;">
+Validation Procedure
+</h3>
+
+<p style="font-family:sans-serif;">
+Perform controlled excitation and verify:
+<br>• consistent transient response
+<br>• preserved low-frequency resonance
+<br>• absence of mechanical noise or coupling drift
+</p>
+
+<hr style="border:none; border-top:1px solid #ddd; margin:18px 0;">
+
+<p style="font-family:sans-serif; font-size:0.9rem; color:#444;">
+Performance gains are achieved through mechanical stability and impedance control rather than signal processing correction.
+</p>
